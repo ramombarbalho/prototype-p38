@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { AppProvider } from "./context/AppContext";
+import { DarkModeProvider } from "./context/DarkModeContext";
 
 import AppLayout from "./ui/AppLayout";
 import Error from "./pages/Error";
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         element: <Students />,
       },
       {
-        path: "/cadastrar-alunos",
+        path: "/alunos/cadastrar",
         element: <StudentsForm />,
       },
       {
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         element: <Classes />,
       },
       {
-        path: "/cadastrar-turmas",
+        path: "/turmas/cadastrar",
         element: <ClassesForm />,
       },
       {
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         element: <Teachers />,
       },
       {
-        path: "/cadastrar-professores",
+        path: "/professores/cadastrar",
         element: <TeachersForm />,
       },
     ],
@@ -56,10 +56,10 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <AppProvider>
+    <DarkModeProvider>
       <GlobalStyles />
       <RouterProvider router={router} />
-    </AppProvider>
+    </DarkModeProvider>
   );
 }
 

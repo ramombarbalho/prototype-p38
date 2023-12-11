@@ -8,11 +8,13 @@ const TableHeader = styled.header`
   column-gap: 2.4rem;
   align-items: center;
 
-  background-color: #555;
-  border-bottom: 1px solid #777;
+  background-color: var(--color-bg-container-secondary);
+  border-bottom: 1px solid var(--color-border);
   text-transform: uppercase;
   letter-spacing: 0.4px;
   padding: 1.6rem 2.4rem;
+
+  transition: all 0.3s;
 `;
 
 const TableRow = styled.div`
@@ -24,12 +26,12 @@ const TableRow = styled.div`
   letter-spacing: 0.4px;
   padding: 1.6rem 2.4rem;
 
-  background-color: #333;
-  border-bottom: 1px solid #777;
+  background-color: var(--color-bg-container-primary);
+  border-bottom: 1px solid var(--color-border);
   letter-spacing: 0.4px;
   padding: 1.6rem 2.4rem;
 
-  transition: none;
+  transition: all 0.3s;
 `;
 
 const PageHeader = styled.header`
@@ -44,11 +46,10 @@ const StyledNavLink = styled(NavLink)`
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    background-color: #444;
+    background-color: var(--color-bg-container-primary);
 
-    border: 1px solid #666;
     border-radius: 5px;
-    color: #bbb;
+    color: var(--color-text);
     font-size: 1.6rem;
     font-weight: 500;
     padding: 1.2rem 2.4rem;
@@ -59,8 +60,8 @@ const StyledNavLink = styled(NavLink)`
   &:active,
   &.active:link,
   &.active:visited {
-    color: #eee;
-    background-color: #555;
+    color: var(--color-hover);
+    background-color: var(--color-bg-container-secondary);
   }
 `;
 
@@ -90,7 +91,7 @@ function Students() {
     <>
       <PageHeader>
         <h2>ALUNOS</h2>
-        <StyledNavLink to="/cadastrar-alunos">CADASTRAR ALUNOS</StyledNavLink>
+        <StyledNavLink to="cadastrar">CADASTRAR ALUNOS</StyledNavLink>
       </PageHeader>
       <div>
         <TableHeader>

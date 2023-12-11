@@ -7,8 +7,8 @@ const StyledLoginForm = styled.form`
   flex-direction: column;
   gap: 2.2rem;
   padding: 3rem;
-  background-color: #333;
-  border: 1px solid #444;
+  background-color: var(--color-bg-container-primary);
+  border-radius: 5px;
 
   & div {
     display: flex;
@@ -28,6 +28,7 @@ const StyledInput = styled.input`
   font-size: 1.6rem;
   padding: 2rem;
   border-radius: 5px;
+  border: 1px solid var(--color-border);
 `;
 
 const StyledLoginButton = styled.button`
