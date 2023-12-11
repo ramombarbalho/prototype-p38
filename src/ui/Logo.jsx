@@ -19,7 +19,7 @@ function Logo() {
     <StyledLogo>
       <img
         style={{ filter: logoFilter }}
-        src="../public/softex_pernambuco_br-200x72.png"
+        src="../softex_pernambuco_br-200x72.png"
         alt="softex logo"
       />
     </StyledLogo>
