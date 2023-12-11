@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { TEACHERS } from "../data/teachers";
+import { CLASSES } from "../data/classes";
 import { NavLink } from "react-router-dom";
 
 const TableHeader = styled.header`
@@ -69,7 +70,7 @@ function Classes() {
   return (
     <>
       <PageHeader>
-        <h2>PROFESSORES</h2>
+        <div>PROFESSORES</div>
         <StyledNavLink to="cadastrar">CADASTRAR PROFESSORES</StyledNavLink>
       </PageHeader>
       <div>
@@ -84,7 +85,13 @@ function Classes() {
             <span>{t.name}</span>
             <span>{t.email}</span>
             <span>{t.phone}</span>
-            <span>{t.class}</span>
+            <span>
+              {CLASSES.filter((c) => c.teacher === t.name).length
+                ? CLASSES.filter((c) => c.teacher === t.name)
+                    .map((c) => c.id)
+                    .join(" - ")
+                : "PENDENTE"}
+            </span>
           </TableRow>
         ))}
       </div>

@@ -69,7 +69,7 @@ function Classes() {
   return (
     <>
       <PageHeader>
-        <h2>TURMAS</h2>
+        <div>TURMAS</div>
         <StyledNavLink to="cadastrar">CADASTRAR TURMAS</StyledNavLink>
       </PageHeader>
       <div>
@@ -85,7 +85,7 @@ function Classes() {
           <TableRow key={c.id}>
             <span>{c.id}</span>
             <span>{c.local}</span>
-            <span>{c.day === 1 ? "SEG - QUA" : "TER - QUI"}</span>
+            <span>{c.days === 1 ? "SEG - QUA" : "TER - QUI"}</span>
             <span>
               {c.hour === 1
                 ? "08:30 as 11:30"

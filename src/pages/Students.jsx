@@ -90,7 +90,7 @@ function Students() {
   return (
     <>
       <PageHeader>
-        <h2>ALUNOS</h2>
+        <div>ALUNOS</div>
         <StyledNavLink to="cadastrar">CADASTRAR ALUNOS</StyledNavLink>
       </PageHeader>
       <div>
