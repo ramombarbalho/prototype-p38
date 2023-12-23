@@ -98,7 +98,7 @@ function Students() {
           <span>NOME</span>
           <span>EMAIL</span>
           <span>CPF</span>
-          <span>FONE</span>
+          <span>TELEFONE</span>
           <span>STATUS</span>
         </TableHeader>
         {STUDENTS.map((student) => (
