@@ -77,7 +77,7 @@ function Classes() {
         <TableHeader>
           <span>NOME</span>
           <span>EMAIL</span>
-          <span>FONE</span>
+          <span>TELEFONE</span>
           <span>TURMA</span>
         </TableHeader>
         {TEACHERS.map((t) => (
