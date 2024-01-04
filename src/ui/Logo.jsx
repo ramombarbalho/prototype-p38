@@ -5,7 +5,7 @@ const StyledLogo = styled.div`
   text-align: center;
   font-size: 2rem;
 
-  & image {
+  & img {
     transition: filter 0.2s;
   }
 `;

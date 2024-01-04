@@ -6,12 +6,15 @@ import Error from "./pages/Error";
 import GlobalStyles from "./styles/GlobalStyles";
 import Dashboard from "./pages/Dashboard";
 import Students from "./pages/Students";
+import Student from "./pages/Student";
 import Classes from "./pages/Classes";
+import Classe from "./pages/Classe";
+import Teachers from "./pages/Teachers";
+import Teacher from "./pages/Teacher";
 import StudentsForm from "./pages/StudentsForm";
 import ClassesForm from "./pages/ClassesForm";
-import Teachers from "./pages/Teachers";
-import Login from "./pages/Login";
 import TeachersForm from "./pages/TeachersForm";
+import Login from "./pages/Login";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +30,10 @@ const router = createBrowserRouter([
         element: <Students />,
       },
       {
+        path: "/alunos/:id",
+        element: <Student />,
+      },
+      {
         path: "/alunos/cadastrar",
         element: <StudentsForm />,
       },
@@ -35,12 +42,20 @@ const router = createBrowserRouter([
         element: <Classes />,
       },
       {
+        path: "/turmas/:id",
+        element: <Classe />,
+      },
+      {
         path: "/turmas/cadastrar",
         element: <ClassesForm />,
       },
       {
         path: "/professores",
         element: <Teachers />,
+      },
+      {
+        path: "/professores/:id",
+        element: <Teacher />,
       },
       {
         path: "/professores/cadastrar",

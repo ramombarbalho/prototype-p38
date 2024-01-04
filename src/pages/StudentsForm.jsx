@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { STUDENTS } from "../data/students";
+import { CLASSES } from "../data/classes";
 
 const StyledForm = styled.form`
   display: flex;
@@ -40,22 +41,28 @@ function StudentsForm() {
   const [cpf, setCpf] = useState("");
   const [phone, setPhone] = useState("");
   const [status, setStatus] = useState("");
+  const [classe, setClasse] = useState("");
 
   function newStudent(e) {
     e.preventDefault();
-    if (!name || !email || !phone || !cpf || !status) return;
-    STUDENTS.push({
+    if (!name || !email || !phone || !cpf || !status || !classe) return;
+    const data = {
+      id: String(STUDENTS.length + 1).padStart(4, "0"),
       name,
       email,
       cpf,
       phone: +phone,
       status: +status,
-    });
+      classe,
+    };
+    STUDENTS.push(data);
+    CLASSES.find((c) => c.id === classe).students.push(data);
     setName("");
     setEmail("");
     setCpf("");
     setPhone("");
     setStatus("");
+    setClasse("");
   }
 
   return (
@@ -106,6 +113,19 @@ function StudentsForm() {
         <option value="">--- INFORME O STATUS</option>
         <option value="1">CURSANDO</option>
         <option value="2">DESATIVADO</option>
+      </StyledSelect>
+      <StyledSelect
+        onChange={(e) => setClasse(e.target.value)}
+        name="classe"
+        id="classe"
+        value={classe}
+      >
+        <option value="">--- INFORME A TURMA</option>
+        {CLASSES.map((c) => (
+          <option key={c.id} value={c.id}>
+            {c.id}
+          </option>
+        ))}
       </StyledSelect>
       <StyledBtnForm onClick={newStudent}>CADASTRAR ALUNO</StyledBtnForm>
     </StyledForm>

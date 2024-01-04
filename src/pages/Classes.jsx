@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { CLASSES } from "../data/classes";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const TableHeader = styled.header`
   display: grid;
@@ -30,6 +30,7 @@ const TableRow = styled.div`
   border-bottom: 1px solid var(--color-border);
   letter-spacing: 0.4px;
   padding: 1.6rem 2.4rem;
+  cursor: pointer;
 
   transition: all 0.3s;
 `;
@@ -66,6 +67,8 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 function Classes() {
+  const navigate = useNavigate();
+
   return (
     <>
       <PageHeader>
@@ -82,7 +85,7 @@ function Classes() {
           <span>PROFESSOR</span>
         </TableHeader>
         {CLASSES.map((c) => (
-          <TableRow key={c.id}>
+          <TableRow key={c.id} onClick={() => navigate(`/turmas/${c.id}`)}>
             <span>{c.id}</span>
             <span>{c.local}</span>
             <span>{c.days === 1 ? "SEG - QUA" : "TER - QUI"}</span>

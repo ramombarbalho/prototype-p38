@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { TEACHERS } from "../data/teachers";
 import { CLASSES } from "../data/classes";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const TableHeader = styled.header`
   display: grid;
@@ -26,6 +26,7 @@ const TableRow = styled.div`
 
   letter-spacing: 0.4px;
   padding: 1.6rem 2.4rem;
+  cursor: pointer;
 
   background-color: var(--color-bg-container-primary);
   border-bottom: 1px solid var(--color-border);
@@ -67,6 +68,8 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 function Classes() {
+  const navigate = useNavigate();
+
   return (
     <>
       <PageHeader>
@@ -81,7 +84,10 @@ function Classes() {
           <span>TURMA</span>
         </TableHeader>
         {TEACHERS.map((t) => (
-          <TableRow key={t.name}>
+          <TableRow
+            key={t.name}
+            onClick={() => navigate(`/professores/${t.phone}`)}
+          >
             <span>{t.name}</span>
             <span>{t.email}</span>
             <span>{t.phone}</span>

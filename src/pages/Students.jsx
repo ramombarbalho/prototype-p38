@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { STUDENTS } from "../data/students";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const TableHeader = styled.header`
   display: grid;
@@ -30,6 +30,7 @@ const TableRow = styled.div`
   border-bottom: 1px solid var(--color-border);
   letter-spacing: 0.4px;
   padding: 1.6rem 2.4rem;
+  cursor: pointer;
 
   transition: all 0.3s;
 `;
@@ -87,6 +88,8 @@ const StyledStatus = styled.span`
 `;
 
 function Students() {
+  const navigate = useNavigate();
+
   return (
     <>
       <PageHeader>
@@ -101,14 +104,14 @@ function Students() {
           <span>TELEFONE</span>
           <span>STATUS</span>
         </TableHeader>
-        {STUDENTS.map((student) => (
-          <TableRow key={student.cpf}>
-            <span>{student.name}</span>
-            <span>{student.email}</span>
-            <span>{student.cpf}</span>
-            <span>{student.phone}</span>
-            <StyledStatus status={student.status}>
-              {student.status === 1 ? "cursando" : "desativado"}
+        {STUDENTS.map((s) => (
+          <TableRow key={s.cpf} onClick={() => navigate(`/alunos/${s.phone}`)}>
+            <span>{s.name}</span>
+            <span>{s.email}</span>
+            <span>{s.cpf}</span>
+            <span>{s.phone}</span>
+            <StyledStatus status={s.status}>
+              {s.status === 1 ? "cursando" : "desativado"}
             </StyledStatus>
           </TableRow>
         ))}
