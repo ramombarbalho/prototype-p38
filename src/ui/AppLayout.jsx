@@ -41,13 +41,6 @@ const Container = styled.div`
 
   & div {
     font-size: 1.6rem;
-
-    & div {
-      &:hover {
-        color: var(--color-hover);
-        background-color: var(--color-bg-container-secondary);
-      }
-    }
   }
 `;
 

@@ -1,70 +1,8 @@
-import styled from "styled-components";
 import { CLASSES } from "../data/classes";
-import { NavLink, useNavigate } from "react-router-dom";
-
-const TableHeader = styled.header`
-  display: grid;
-  grid-template-columns: 0.6fr 0.6fr 0.6fr 1fr 0.6fr 1fr;
-  column-gap: 2.4rem;
-  align-items: center;
-
-  background-color: var(--color-bg-container-secondary);
-  border-bottom: 1px solid var(--color-border);
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
-  padding: 1.6rem 2.4rem;
-
-  transition: all 0.3s;
-`;
-
-const TableRow = styled.div`
-  display: grid;
-  grid-template-columns: 0.6fr 0.6fr 0.6fr 1fr 0.6fr 1fr;
-  column-gap: 2.4rem;
-  align-items: center;
-
-  letter-spacing: 0.4px;
-  padding: 1.6rem 2.4rem;
-
-  background-color: var(--color-bg-container-primary);
-  border-bottom: 1px solid var(--color-border);
-  letter-spacing: 0.4px;
-  padding: 1.6rem 2.4rem;
-  cursor: pointer;
-
-  transition: all 0.3s;
-`;
-
-const PageHeader = styled.header`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-const StyledNavLink = styled(NavLink)`
-  &:link,
-  &:visited {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    background-color: var(--color-bg-container-primary);
-
-    border-radius: 5px;
-    color: var(--color-text);
-    font-size: 1.6rem;
-    font-weight: 500;
-    padding: 1.2rem 2.4rem;
-    transition: all 0.3s;
-  }
-
-  &:hover,
-  &:active,
-  &.active:link,
-  &.active:visited {
-    color: var(--color-hover);
-    background-color: var(--color-bg-container-secondary);
-  }
-`;
+import { useNavigate } from "react-router-dom";
+import PageHeader from "../ui/PageHeader";
+import StyledNavLink from "../ui/StyledNavLink";
+import TableRow from "../ui/TableRow";
 
 function Classes() {
   const navigate = useNavigate();
@@ -76,16 +14,20 @@ function Classes() {
         <StyledNavLink to="cadastrar">CADASTRAR TURMAS</StyledNavLink>
       </PageHeader>
       <div>
-        <TableHeader>
+        <TableRow type="header" columns="0.6fr 0.6fr 0.6fr 1fr 0.6fr 1fr">
           <span>ID</span>
           <span>LOCAL</span>
           <span>DIAS</span>
           <span>HORÁRIO</span>
           <span>STACK</span>
           <span>PROFESSOR</span>
-        </TableHeader>
+        </TableRow>
         {CLASSES.map((c) => (
-          <TableRow key={c.id} onClick={() => navigate(`/turmas/${c.id}`)}>
+          <TableRow
+            key={c.id}
+            onClick={() => navigate(`/turmas/${c.id}`)}
+            columns="0.6fr 0.6fr 0.6fr 1fr 0.6fr 1fr"
+          >
             <span>{c.id}</span>
             <span>{c.local}</span>
             <span>{c.days === 1 ? "SEG - QUA" : "TER - QUI"}</span>

@@ -4,12 +4,7 @@ const ButtonIcon = styled.button`
   background: none;
   border: none;
   padding: 0.6rem;
-  /* border-radius: var(--border-radius-sm); */
   cursor: pointer;
-
-  /* &:hover {
-    background-color: var(--color-text);
-  } */
 
   & svg {
     width: 2.2rem;
