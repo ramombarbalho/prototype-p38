@@ -33,7 +33,7 @@ const TableRow = styled.div`
       }
     `}
 
-  transition: all 0.3s;
+  transition: all 0.2s;
 `;
 
 export default TableRow;

@@ -51,7 +51,7 @@ body {
   color: var(--color-text);
   font-family: "Roboto Condensed", sans-serif;
   background-color: var(--color-bg-body);
-  transition: background-color 0.3s;
+  transition: background-color 0.2s;
   overflow: hidden;
 }
 

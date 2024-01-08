@@ -7,11 +7,13 @@ function Student() {
   const { name, email, phone } = TEACHERS.find((el) => el.phone === +params.id);
 
   return (
-    <div>
-      <p>{name}</p>
-      <p>{email}</p>
-      <p>{phone}</p>
-    </div>
+    <>
+      <div style={{ border: "1px solid black" }}>
+        <p>{name}</p>
+        <p>{email}</p>
+        <p>{phone}</p>
+      </div>
+    </>
   );
 }
 

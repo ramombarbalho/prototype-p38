@@ -14,7 +14,7 @@ const StyledNavLink = styled(NavLink)`
     font-size: 1.6rem;
     font-weight: 500;
     padding: 1.2rem 2.4rem;
-    transition: all 0.3s;
+    transition: all 0.2s;
   }
 
   &:hover,

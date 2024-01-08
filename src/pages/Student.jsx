@@ -9,14 +9,16 @@ function Student() {
   );
 
   return (
-    <div>
-      <p>{name}</p>
-      <p>{email}</p>
-      <p>{cpf}</p>
-      <p>{phone}</p>
-      <p>{status}</p>
-      <p>{classe}</p>
-    </div>
+    <>
+      <div style={{ border: "1px solid black" }}>
+        <p>{name}</p>
+        <p>{email}</p>
+        <p>{cpf}</p>
+        <p>{phone}</p>
+        <p>{status}</p>
+        <p>{classe}</p>
+      </div>
+    </>
   );
 }
 

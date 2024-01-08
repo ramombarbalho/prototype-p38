@@ -41,7 +41,7 @@ const StyledLoginButton = styled.button`
   border-radius: 0.6rem;
   background-color: #f89451;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.2s;
 
   &:hover {
     background-color: #ff7920;
