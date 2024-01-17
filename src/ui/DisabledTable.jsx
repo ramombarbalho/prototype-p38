@@ -3,9 +3,9 @@ import StudentStatus from "./StudentStatus";
 import TableRow from "./TableRow";
 import Table from "./Table";
 
-function StudentsTable({ students }) {
+function DisabledTable({ students }) {
   const navigate = useNavigate();
-  const activeStudents = students.filter((s) => s.status !== 2);
+  const disabledStudents = students.filter((s) => s.status === 2);
 
   return (
     <Table>
@@ -16,10 +16,10 @@ function StudentsTable({ students }) {
         <span>TELEFONE</span>
         <span>STATUS</span>
       </TableRow>
-      {activeStudents.map((s) => (
+      {disabledStudents.map((s) => (
         <TableRow
           key={s.cpf}
-          onClick={() => navigate(`/alunos/${s.phone}`)}
+          onClick={() => navigate(`/desativados/${s.phone}`)}
           columns="2.2fr 2fr 1fr 1.2fr 0.8fr"
         >
           <span>{s.name}</span>
@@ -27,9 +27,7 @@ function StudentsTable({ students }) {
           <span>{s.cpf}</span>
           <span>{s.phone}</span>
           <StudentStatus status={s.status}>
-            {s.status === 1
-              ? "cursando"
-              : `${s.status === 2 ? "desativado" : "atenção"}`}
+            {s.status === 1 ? "cursando" : "desativado"}
           </StudentStatus>
         </TableRow>
       ))}
@@ -37,4 +35,4 @@ function StudentsTable({ students }) {
   );
 }
 
-export default StudentsTable;
+export default DisabledTable;

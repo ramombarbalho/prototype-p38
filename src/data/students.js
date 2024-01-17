@@ -19,6 +19,15 @@ export const STUDENTS = [
   },
   {
     id: "0003",
+    name: "MARIA DOS SANTOS ROCHA OLIVEIRA",
+    email: "vinicius@hotmail.com",
+    cpf: "555.222.888-70",
+    phone: 81990004417,
+    status: 3,
+    classe: "003",
+  },
+  {
+    id: "0004",
     name: "GABRIEL MIRANDA CASTELO BRANCO MACIEL",
     email: "gabriel@gmail.com",
     cpf: "111.000.111-00",
@@ -27,7 +36,7 @@ export const STUDENTS = [
     classe: "003",
   },
   {
-    id: "0004",
+    id: "0005",
     name: "LUCIANO RIBEIRO GALHARDO",
     email: "luciano@hotmail.com",
     cpf: "123.654.789-55",
@@ -36,12 +45,21 @@ export const STUDENTS = [
     classe: "001",
   },
   {
-    id: "0005",
+    id: "0006",
     name: "VINICIUS DOS SANTOS ROCHA OLIVEIRA",
     email: "vinicius@hotmail.com",
     cpf: "555.222.888-74",
     phone: 81990004477,
     status: 2,
+    classe: "002",
+  },
+  {
+    id: "0007",
+    name: "VITORIA DOS SANTOS ROCHA OLIVEIRA",
+    email: "vinicius@hotmail.com",
+    cpf: "555.222.888-04",
+    phone: 81990004407,
+    status: 3,
     classe: "002",
   },
 ];

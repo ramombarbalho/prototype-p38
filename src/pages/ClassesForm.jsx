@@ -5,6 +5,7 @@ import Button from "../ui/Button";
 import Form from "../ui/Form";
 import Select from "../ui/Select";
 import PageHeader from "../ui/PageHeader";
+import PageTitle from "../ui/PageTitle";
 
 function ClassesForm() {
   const [local, setLocal] = useState("");
@@ -36,7 +37,7 @@ function ClassesForm() {
   return (
     <>
       <PageHeader>
-        <div>CADASTRAR TURMA</div>
+        <PageTitle>CADASTRAR TURMA</PageTitle>
       </PageHeader>
       <Form>
         <Select
@@ -45,7 +46,7 @@ function ClassesForm() {
           id="local"
           value={local}
         >
-          <option value="">--- INFORME O LOCAL</option>
+          <option value="">--- Informe o local</option>
           <option value="SOFTEX">SOFTEX</option>
           <option value="UFPB">UFPB</option>
           <option value="UFRN">UFRN</option>
@@ -56,7 +57,7 @@ function ClassesForm() {
           id="days"
           value={days}
         >
-          <option value="">--- INFORME OS DIAS</option>
+          <option value="">--- Informe os dias</option>
           <option value="1">SEG - QUA</option>
           <option value="2">TER - QUI</option>
         </Select>
@@ -66,7 +67,7 @@ function ClassesForm() {
           id="hour"
           value={hour}
         >
-          <option value="">--- INFORME O HORÁRIO</option>
+          <option value="">--- Informe o horário</option>
           <option value="1">08:30 as 11:30</option>
           <option value="2">14:00 as 17:00</option>
           <option value="3">18:30 as 21:30</option>
@@ -77,7 +78,7 @@ function ClassesForm() {
           id="stack"
           value={stack}
         >
-          <option value="">--- INFORME A TRILHA</option>
+          <option value="">--- Informe a trilha</option>
           <option value="1">BACK-END</option>
           <option value="2">FRONT-END</option>
         </Select>
@@ -87,7 +88,7 @@ function ClassesForm() {
           id="teacher"
           value={teacher}
         >
-          <option value="">--- INFORME O PROFESSOR</option>
+          <option value="">--- Informe o professor</option>
           {TEACHERS.map((t) => (
             <option key={t.name} value={t.name}>
               {t.name}

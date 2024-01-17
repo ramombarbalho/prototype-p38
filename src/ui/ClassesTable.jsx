@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import TableRow from "./TableRow";
+import Table from "./Table";
 
 function ClassesTable({ classes }) {
   const navigate = useNavigate();
 
   return (
-    <div role="table">
+    <Table>
       <TableRow type="header" columns="0.6fr 0.6fr 0.6fr 1fr 0.6fr 1fr">
         <span>ID</span>
         <span>LOCAL</span>
@@ -34,7 +35,7 @@ function ClassesTable({ classes }) {
           <span>{c.teacher}</span>
         </TableRow>
       ))}
-    </div>
+    </Table>
   );
 }
 

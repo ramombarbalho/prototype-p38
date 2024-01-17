@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
-import DarkModeToggle from "./DarkModeToggle";
+// import DarkModeToggle from "./DarkModeToggle";
 import { HiArrowRightOnRectangle } from "react-icons/hi2";
 import ButtonIcon from "./ButtonIcon";
 
@@ -18,9 +18,9 @@ function HeaderMenu() {
   }
   return (
     <StyledHeaderMenu>
-      <li>
+      {/* <li>
         <DarkModeToggle />
-      </li>
+      </li> */}
       <li>
         <ButtonIcon onClick={logout}>
           <HiArrowRightOnRectangle />

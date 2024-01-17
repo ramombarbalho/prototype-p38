@@ -16,15 +16,11 @@ const LoginLayout = styled.main`
   }
 `;
 
-const Heading = styled.h1`
-  font-weight: 100;
-`;
-
 function Login() {
   return (
     <LoginLayout>
       <Logo />
-      <Heading>ENTRAR</Heading>
+      {/* <Heading>ENTRAR</Heading> */}
       <LoginForm />
     </LoginLayout>
   );

@@ -39,13 +39,13 @@ const StyledLoginButton = styled.button`
   color: #000;
   height: 4rem;
   border-radius: 0.6rem;
-  background-color: #f89451;
+  background-color: #00ff84;
   cursor: pointer;
   transition: background-color 0.2s;
 
-  &:hover {
+  /* &:hover {
     background-color: #ff7920;
-  }
+  } */
 `;
 
 function LoginForm() {
@@ -80,7 +80,7 @@ function LoginForm() {
           autoComplete="off"
         />
       </div>
-      {<StyledLoginButton onClick={login}>ENTRAR</StyledLoginButton>}
+      <StyledLoginButton onClick={login}>ENTRAR</StyledLoginButton>
     </StyledLoginForm>
   );
 }

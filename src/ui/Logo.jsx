@@ -7,6 +7,7 @@ const StyledLogo = styled.div`
 
   & img {
     transition: filter 0.2s;
+    width: 17rem;
   }
 `;
 
@@ -19,7 +20,7 @@ function Logo() {
     <StyledLogo>
       <img
         style={{ filter: logoFilter }}
-        src="../softex_pernambuco_br-200x72.png"
+        src="./logo-sigfap.png"
         alt="softex logo"
       />
     </StyledLogo>

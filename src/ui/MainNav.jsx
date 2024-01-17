@@ -21,31 +21,21 @@ function MainNav() {
             <span>ALUNOS</span>
           </StyledNavLink>
         </li>
-        {/* <li>
-          <StyledNavLink to="/cadastrar-alunos">
-            <span>CADASTRAR ALUNOS</span>
-          </StyledNavLink>
-        </li> */}
         <li>
           <StyledNavLink to="/turmas">
             <span>TURMAS</span>
           </StyledNavLink>
         </li>
-        {/* <li>
-          <StyledNavLink to="/cadastrar-turmas">
-            <span>CADASTRAR TURMAS</span>
-          </StyledNavLink>
-        </li> */}
         <li>
           <StyledNavLink to="/professores">
             <span>PROFESSORES</span>
           </StyledNavLink>
         </li>
-        {/* <li>
-          <StyledNavLink to="/cadastrar-professores">
-            <span>CADASTRAR PROFESSORES</span>
+        <li>
+          <StyledNavLink to="/desativados">
+            <span>DESATIVADOS</span>
           </StyledNavLink>
-        </li> */}
+        </li>
       </NavList>
     </nav>
   );

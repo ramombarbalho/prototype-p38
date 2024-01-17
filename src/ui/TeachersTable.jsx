@@ -1,12 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import TableRow from "./TableRow";
 import { CLASSES } from "../data/classes";
+import Table from "./Table";
 
 function TeachersTable({ teachers }) {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <Table>
       <TableRow type="header" columns="2.2fr 2.2fr 1.4fr 0.6fr">
         <span>NOME</span>
         <span>EMAIL</span>
@@ -31,7 +32,7 @@ function TeachersTable({ teachers }) {
           </span>
         </TableRow>
       ))}
-    </div>
+    </Table>
   );
 }
 

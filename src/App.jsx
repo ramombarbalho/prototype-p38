@@ -15,6 +15,7 @@ import StudentsForm from "./pages/StudentsForm";
 import ClassesForm from "./pages/ClassesForm";
 import TeachersForm from "./pages/TeachersForm";
 import Login from "./pages/Login";
+import Disabled from "./pages/Disabled";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,14 @@ const router = createBrowserRouter([
       {
         path: "/professores/cadastrar",
         element: <TeachersForm />,
+      },
+      {
+        path: "/desativados",
+        element: <Disabled />,
+      },
+      {
+        path: "/desativados/:id",
+        element: <Student />,
       },
     ],
   },

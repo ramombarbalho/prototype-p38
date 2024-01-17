@@ -4,6 +4,7 @@ import Button from "../ui/Button";
 import Form from "../ui/Form";
 import Input from "../ui/Input";
 import PageHeader from "../ui/PageHeader";
+import PageTitle from "../ui/PageTitle";
 
 function TeachersForm() {
   const [name, setName] = useState("");
@@ -26,7 +27,7 @@ function TeachersForm() {
   return (
     <>
       <PageHeader>
-        <div>CADASTRAR PROFESSOR</div>
+        <PageTitle>CADASTRAR PROFESSOR</PageTitle>
       </PageHeader>
       <Form>
         <Input

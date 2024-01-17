@@ -12,7 +12,7 @@ const TableRow = styled.div`
   background-color: var(--color-bg-container-primary);
   border-bottom: 1px solid var(--color-border);
   letter-spacing: 0.4px;
-  padding: 1.6rem 2.4rem;
+  padding: 1.3rem 2.2rem;
   cursor: pointer;
 
   &:hover {
@@ -26,6 +26,7 @@ const TableRow = styled.div`
       background-color: var(--color-bg-container-secondary);
       text-transform: uppercase;
       cursor: default;
+      border-bottom: 1px solid #00ff95;
 
       &:hover {
         color: inherit;
@@ -34,6 +35,10 @@ const TableRow = styled.div`
     `}
 
   transition: all 0.2s;
+
+  & span {
+    font-size: 1.4rem;
+  }
 `;
 
 export default TableRow;

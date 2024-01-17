@@ -11,13 +11,19 @@ const StudentStatus = styled.span`
   ${(props) =>
     props.status === 1 &&
     css`
-      background-color: #93ff93;
+      background-color: #00ff84;
     `}
 
   ${(props) =>
     props.status === 2 &&
     css`
-      background-color: #ff9292;
+      background-color: #505050;
+    `}
+
+    ${(props) =>
+    props.status === 3 &&
+    css`
+      background-color: #ffde59;
     `}
 `;
 
