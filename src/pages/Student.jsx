@@ -47,7 +47,7 @@ function Student() {
           <StudentStatus status={status}>
             {status === 1
               ? "cursando"
-              : `${status === 2 ? "desativado" : "atenção"}`}
+              : `${status === 2 ? "desativado" : "observação"}`}
           </StudentStatus>
         </Test2>
         <div>

@@ -34,6 +34,7 @@ const Test2 = styled.div`
 
 function Dashboard() {
   const alertStudents = STUDENTS.filter((s) => s.status === 3);
+
   return (
     <>
       <PageHeader>
@@ -55,7 +56,7 @@ function Dashboard() {
                 <StudentStatus status={s.status}>
                   {s.status === 1
                     ? "cursando"
-                    : `${s.status === 2 ? "desativado" : "alerta"}`}
+                    : `${s.status === 2 ? "desativado" : "observação"}`}
                 </StudentStatus>
               </Test2>
               <div>

@@ -87,7 +87,14 @@ function StudentsForm() {
           <option value="">--- Informe a turma</option>
           {CLASSES.map((c) => (
             <option key={c.id} value={c.id}>
-              {c.id}
+              {c.id} - {c.stack === 1 ? "BACK-END" : "FRONT-END"} - {c.local} -{" "}
+              {c.days === 1 ? "SEG - QUA" : "TER - QUI"} -{" "}
+              {c.hour === 1
+                ? "08:30 as 11:30"
+                : c.hour === 2
+                ? "14:00 as 17:00"
+                : "18:30 as 21:30"}{" "}
+              - {c.teacher}
             </option>
           ))}
         </Select>

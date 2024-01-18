@@ -29,7 +29,7 @@ function StudentsTable({ students }) {
           <StudentStatus status={s.status}>
             {s.status === 1
               ? "cursando"
-              : `${s.status === 2 ? "desativado" : "atenção"}`}
+              : `${s.status === 2 ? "desativado" : "observação"}`}
           </StudentStatus>
         </TableRow>
       ))}
